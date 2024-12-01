@@ -12,14 +12,8 @@ def main():
     print("Part 1: ", part_1)
     
     # Part 2
-    l2_counts = {}
-    for x in l2:
-        if x not in l2_counts:
-            l2_counts[x] = 0
-        l2_counts[x] += 1
-    part_2 = sum([x * l2_counts.get(x, 0) for x in l1])
+    part_2 = sum([x * l2.count(x) for x in l1])
     print("Part 2: ", part_2)
-    
     
     
 if __name__ == "__main__":
